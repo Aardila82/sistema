@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EntradaController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 
@@ -165,6 +166,8 @@ Route::get('/getId', function(){
     ]);
     return $id;
 });
+
+Route::get('entrada', [EntradaController::class, 'index']);
 
 
 
